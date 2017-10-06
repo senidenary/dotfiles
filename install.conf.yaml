@@ -4,10 +4,7 @@
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
     ~/.oh-my-zsh: modules/oh-my-zsh
-
-- shell:
-    - [mkdir -p ~/.oh-my-zsh/custom/themes, Creating oh-my-zsh custom themes folder]
-
-- link:
-    ~/.oh-my-zsh/custom/themes/powerlevel9k: modules/powerlevel9k
+    ~/.oh-my-zsh/custom/themes/powerlevel9k:
+        create: true
+        path: modules/powerlevel9k
 
