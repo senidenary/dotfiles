@@ -2,7 +2,6 @@
 
 - shell:
     - [git submodule update --init --recursive, Updating submodules]
-    - [modules/powerline-fonts/install.sh, Installing powerline fonts]
 
 - link:
     ~/.vimrc: vimrc
