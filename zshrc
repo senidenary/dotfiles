@@ -88,5 +88,7 @@ DEFAULT_USER=ahab
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.zsh_aliases
-neofetch
+if command -v neofetch; then
+    neofetch
+fi
 
