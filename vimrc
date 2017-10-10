@@ -78,5 +78,5 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-:set listchars=eol:¬,tab:>·,trail:~
-:set list
+set listchars=eol:¬,tab:>·,trail:~
+set list
