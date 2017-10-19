@@ -92,7 +92,7 @@ DEFAULT_USER=ahab
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.zsh_aliases
-if command -v neofetch; then
+if command -v neofetch > /dev/null; then
     neofetch
 fi
 
