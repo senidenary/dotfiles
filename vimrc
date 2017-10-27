@@ -80,3 +80,8 @@ set wrap "Wrap lines
 
 set listchars=eol:¬,tab:>·,trail:~
 set list
+
+" Up/Down move graphically
+noremap <buffer> <silent> <Up> gk
+noremap <buffer> <silent> <Down> gj
+
