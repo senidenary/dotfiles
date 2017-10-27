@@ -2,9 +2,6 @@
 filetype plugin on
 filetype indent on
 
-" Set to auto read when a file is changed from the outside
-set autoread
-
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
@@ -14,6 +11,12 @@ set number
 
 " A buffer becomes hidden when it is abandoned
 set hid
+
+" Show command auto-completions
+set wildmenu
+
+" Display partially entered commands
+set showcmd
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -26,7 +29,7 @@ set ignorecase
 set smartcase
 
 " Highlight search results
-" set hlsearch
+set hlsearch
 
 " Makes search act like search in modern browsers
 set incsearch 
@@ -39,6 +42,7 @@ set magic
 
 " Show matching brackets when text indicator is over them
 set showmatch
+
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -50,20 +54,9 @@ set tm=500
 
 " Enable syntax highlighting
 syntax enable
+colorscheme desert
 
-" Enable 256 colors palette in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
-	set t_Co=256
-endif
-
-try
-	colorscheme desert
-catch
-endtry
-
-set background=dark
-
-" Use spaces instead of tabs
+" Use spaces instead of tabs, except in makefiles
 set expandtab
 autocmd FileType make setlocal noexpandtab
 
@@ -78,11 +71,13 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+" Show whitespace
 set listchars=eol:¬,tab:>·,trail:~
 set list
 
-" Up/Down move graphically
+" Up/Down keys move graphically
 noremap  <buffer> <silent> <Up>        gk
 inoremap <buffer> <silent> <Up>   <C-o>gk
 noremap  <buffer> <silent> <Down>      gj
 inoremap <buffer> <silent> <Down> <C-o>gj
+
