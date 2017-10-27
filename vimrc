@@ -82,6 +82,7 @@ set listchars=eol:¬,tab:>·,trail:~
 set list
 
 " Up/Down move graphically
-noremap <buffer> <silent> <Up> gk
-noremap <buffer> <silent> <Down> gj
-
+noremap  <buffer> <silent> <Up>        gk
+inoremap <buffer> <silent> <Up>   <C-o>gk
+noremap  <buffer> <silent> <Down>      gj
+inoremap <buffer> <silent> <Down> <C-o>gj
