@@ -1,26 +1,3 @@
-" Vundle
-set nocompatible " be iMproved, required
-filetype off     " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" plugin on GitHub repo
-Plugin 'Valloric/YouCompleteMe'
-
-Plugin 'beyondmarc/glsl.vim'
-
-" All of your Plugins must be added before the following line
-call vundle#end()         " required
-filetype plugin indent on " required
-"
-" Put your non-Plugin stuff after this line
-
-
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
