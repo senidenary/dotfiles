@@ -25,6 +25,9 @@ DEFAULT_USER=`whoami`
 # Environment Setup
 
 source ~/.zsh_aliases
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 
 # CUDA
 export PATH=/usr/local/cuda-8.0/bin:$PATH
