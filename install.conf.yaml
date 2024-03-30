@@ -11,5 +11,4 @@
     ~/.oh-my-zsh/custom/themes/powerlevel9k:
         create: true
         path: modules/powerlevel9k
-    ~/.config/i3/config: i3_config
 
