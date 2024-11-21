@@ -27,3 +27,6 @@ resetperms() {
     find $1 -type f -exec chmod 644 {} \;
 }
 
+f() {
+    fzf --bind 'enter:execute-silent(echo {} | xclip -i -r -sel clip)+abort'
+}

@@ -35,6 +35,9 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 
+export FZF_DEFAULT_COMMAND='fdfind --type f --exclude .git'
+export FZF_DEFAULT_OPTS='--height 50% --layout reverse --border'
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
