@@ -27,6 +27,21 @@ resetperms() {
     find $1 -type f -exec chmod 644 {} \;
 }
 
-f() {
-    fzf --bind 'enter:execute-silent(echo {} | xclip -i -r -sel clip)+abort'
-}
+if [ -f "/proc/sys/fs/binfmt_misc/WSLInterop" ] ; then
+    # Windows only
+
+    f() {
+        fzf --bind 'enter:execute-silent(echo {} | clip.exe)+abort'
+    }
+
+    alias open='explorer.exe';
+
+else
+    # Linux only
+
+    f() {
+        fzf --bind 'enter:execute-silent(echo {} | xclip -i -r -sel clip)+abort'
+    }
+
+fi
+
