@@ -77,6 +77,8 @@ n()
         rm -f -- "$NNN_TMPFILE" > /dev/null
     }
 }
+# 'A' stops auto-entering a folder on unique match
+export NNN_OPTS='A'
 
 if [ -f "/proc/sys/fs/binfmt_misc/WSLInterop" ] ; then
 # Windows only
