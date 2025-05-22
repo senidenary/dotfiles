@@ -1,3 +1,24 @@
+" Install vim-plug if not already present
+let data_dir = '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'nightsense/snow'
+Plug 'itchyny/lightline.vim'
+call plug#end()
+
+syntax enable
+set termguicolors
+colorscheme snow
+set background=dark
+
+let g:lightline = { 'colorscheme': 'snow_dark' }
+set laststatus=2
+set noshowmode
+
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
@@ -44,10 +65,6 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-
-" Enable syntax highlighting
-syntax enable
-colorscheme desert
 
 " Use spaces instead of tabs, except in makefiles
 " set expandtab
