@@ -33,6 +33,7 @@ DEFAULT_USER=`whoami`
 source ~/.zsh_aliases
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export LC_COLLATE=C
 
 # Include local bin directory in the path
 if [ -d "$HOME/bin" ] ; then
