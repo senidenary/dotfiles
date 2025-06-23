@@ -12,4 +12,5 @@
         create: true
         path: modules/powerlevel10k
     ~/.p10k.zsh: p10k.zsh
+    ~/.config/gitui/key_bindings.ron: gitui/key_bindings.ron
 
