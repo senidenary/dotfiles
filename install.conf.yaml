@@ -13,4 +13,8 @@
         path: modules/powerlevel10k
     ~/.p10k.zsh: p10k.zsh
     ~/.config/gitui/key_bindings.ron: gitui/key_bindings.ron
+    ~/.git-commit-template: git-commit-template
+
+- shell:
+    - git config --global commit.template ~/.git-commit-template
 
