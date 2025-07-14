@@ -13,6 +13,7 @@
         path: modules/powerlevel10k
     ~/.p10k.zsh: p10k.zsh
     ~/.config/gitui/key_bindings.ron: gitui/key_bindings.ron
+    ~/.config/alacritty/alacritty.toml: alacritty.toml
     ~/.git-commit-template: git-commit-template
 
 - shell:
