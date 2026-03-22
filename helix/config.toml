@@ -1,0 +1,10 @@
+theme = "peachpuff"
+
+[editor]
+mouse = false
+auto-pairs = false
+popup-border = "all"
+
+[editor.soft-wrap]
+enable = true
+

@@ -5,6 +5,7 @@
 
 - link:
     ~/.vimrc: vimrc
+    ~/.config/helix/config.toml: helix/config.toml
     ~/.zshrc: zshrc
     ~/.zsh_aliases: zsh_aliases
     ~/.oh-my-zsh: modules/oh-my-zsh
