@@ -31,7 +31,7 @@ DEFAULT_USER=`whoami`
 
 # Environment Setup
 source ~/.zsh_aliases
-export VISUAL=vim
+export VISUAL=hx
 export EDITOR="$VISUAL"
 export LC_COLLATE=C
 
