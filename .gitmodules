@@ -1,9 +1,9 @@
 [submodule ".dotbot"]
 	path = .dotbot
-    url = https://github.com/anishathalye/dotbot
-[submodule "modules/oh-my-zsh"]
-	path = modules/oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh
+	url = https://github.com/anishathalye/dotbot
 [submodule "modules/powerlevel10k"]
 	path = modules/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "modules/antidote"]
+	path = modules/antidote
+	url = https://github.com/mattmc3/antidote.git

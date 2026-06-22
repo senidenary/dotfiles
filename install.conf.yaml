@@ -8,10 +8,8 @@
     ~/.config/helix/config.toml: helix/config.toml
     ~/.zshrc: zshrc
     ~/.zsh_aliases: zsh_aliases
-    ~/.oh-my-zsh: modules/oh-my-zsh
-    ~/.oh-my-zsh/custom/themes/powerlevel10k:
-        create: true
-        path: modules/powerlevel10k
+    ~/.antidote: modules/antidote
+    ~/.zsh_plugins.txt: zsh_plugins.txt
     ~/.p10k.zsh: p10k.zsh
     ~/.config/gitui/key_bindings.ron: gitui/key_bindings.ron
     ~/.config/alacritty/alacritty.toml: alacritty.toml

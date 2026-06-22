@@ -1,0 +1,9 @@
+# Handle compinit (defers call till end)
+mattmc3/ez-compinit
+
+# Prompt
+romkatv/powerlevel10k
+
+# Pretty colours
+zsh-users/zsh-syntax-highlighting
+mattmc3/zephyr path:plugins/color

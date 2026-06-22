@@ -11,29 +11,24 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+source ~/.antidote/antidote.zsh
+antidote load
 
-# Oh My Zsh Options
-export ZSH=/home/`whoami`/.oh-my-zsh
-
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-CASE_SENSITIVE="true"
-DISABLE_AUTO_UPDATE="true"
-COMPLETION_WAITING_DOTS="true"
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-HIST_STAMPS="yyyy-mm-dd"
-plugins=(git sudo vi-mode)
-
-source $ZSH/oh-my-zsh.sh
-
-DEFAULT_USER=`whoami`
-
+# Highlight options during tab completion
+zstyle ':completion:*' menu select
 
 # Environment Setup
 source ~/.zsh_aliases
 export VISUAL=hx
 export EDITOR="$VISUAL"
 export LC_COLLATE=C
+
+HISTSIZE=100000
+SAVEHIST=100000
+HISTFILE=~/.zsh_history
+setopt HIST_IGNORE_SPACE
+
+setopt AUTO_PUSHD
 
 # Include local bin directory in the path
 if [ -d "$HOME/bin" ] ; then
@@ -88,6 +83,6 @@ else
     export NNN_PLUG='d:dragdrop'
 fi
 
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+

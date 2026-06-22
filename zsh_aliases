@@ -1,5 +1,9 @@
 alias ffmpeg='ffmpeg -hide_banner';
 
+alias la='ls -a';
+alias ll='ls -l';
+alias lla='ls -la';
+
 extract() {
     if [ -f "$1" ] ; then
         case "$1" in
