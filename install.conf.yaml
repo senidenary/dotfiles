@@ -5,15 +5,23 @@
 
 - link:
     ~/.vimrc: vimrc
-    ~/.config/helix/config.toml: helix/config.toml
+    ~/.config/helix/config.toml:
+        create: true
+        path: helix/config.toml
     ~/.zshrc: zshrc
     ~/.zsh_aliases: zsh_aliases
     ~/.antidote: modules/antidote
     ~/.zsh_plugins.txt: zsh_plugins.txt
     ~/.p10k.zsh: p10k.zsh
-    ~/.config/gitui/key_bindings.ron: gitui/key_bindings.ron
-    ~/.config/alacritty/alacritty.toml: alacritty.toml
-    ~/.config/fastfetch/config.jsonc: fastfetch/config.jsonc
+    ~/.config/gitui/key_bindings.ron:
+        create: true
+        path: gitui/key_bindings.ron
+    ~/.config/alacritty/alacritty.toml:
+        create: true
+        path: alacritty.toml
+    ~/.config/fastfetch/config.jsonc:
+        create: true
+        path: fastfetch/config.jsonc
     ~/.git-commit-template: git-commit-template
 
 - shell:
