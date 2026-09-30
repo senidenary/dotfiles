@@ -37,7 +37,7 @@ fi
 
 
 export FZF_DEFAULT_COMMAND='fd --type f --exclude .git'
-export FZF_DEFAULT_OPTS='--height 50% --layout reverse --border rounded'
+export FZF_DEFAULT_OPTS='--height 50% --layout reverse --border rounded ---cycle'
 
 
 # Reenable reverse history search (would otherwise be disabled by vi-mode)
