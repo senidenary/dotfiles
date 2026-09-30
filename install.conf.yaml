@@ -29,4 +29,5 @@
     - git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold cyan)%h%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n%C(white)%s%C(reset) %C(dim white)[%an]%C(reset)%n'"
     - git config --global alias.fc '!f() { fuzzy_git_branch="" && fuzzy_git_branch=$(git branch | fzf | tr -d "* ") && [ ! $fuzzy_git_branch = "" ] && git checkout $fuzzy_git_branch; }; f'
     - git config --global alias.fcr '!f() { fuzzy_git_branch="" && fuzzy_git_branch=$(git branch --remotes | fzf | tr -d "* ") && [ ! $fuzzy_git_branch = "" ] && git checkout -t $fuzzy_git_branch; }; f'
+    - git config --global alias.fbd '!f() { fuzzy_git_branch="" && fuzzy_git_branch=$(git branch | fzf | tr -d "* ") && [ ! $fuzzy_git_branch = "" ] && git branch -d $fuzzy_git_branch; }; f'
 
