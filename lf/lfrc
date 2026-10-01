@@ -1,0 +1,48 @@
+set shell zsh
+
+# Set internal field separator (IFS) to "\n" for shell commands
+# This is useful to automatically split file names in $fs and $fx properly
+# since default file separator used in these variables (i.e. 'filesep' option)
+# is newline. You need to consider the values of these options and create your
+# commands accordingly.
+set ifs "\n"
+
+# Cosmetic options
+set drawbox # Draw boxes around the panes
+set icons # Pretty icons
+
+# Execute current file (must be executable)
+map x $$f
+# Execute and wait for keypress
+map X !$f
+
+cmd bulk-rename ${{
+    old="$(mktemp)"
+    new="$(mktemp)"
+    if [ -n "$fs" ]; then
+        fs="$(basename -a -- $fs)"
+    else
+        fs="$(ls)"
+    fi
+    printf '%s\n' "$fs" > "$old"
+    printf '%s\n' "$fs" > "$new"
+    $EDITOR "$new"
+    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+    paste "$old" "$new" | while IFS= read -r names; do
+        src="$(printf '%s' "$names" | cut -f1)"
+        dst="$(printf '%s' "$names" | cut -f2)"
+        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+            continue
+        fi
+        mv -- "$src" "$dst"
+    done
+    rm -- "$old" "$new"
+    lf -remote "send $id unselect"
+}}
+map R bulk-rename
+
+# Q to quit without changing directories
+# Achieved by changing back to original dir before quitting.
+map Q %lf -remote "send $id :cd \"$lf_user_OLDPWD\"; quit"
+# set $lf_user_OLDPWD upon startup
+&lf -remote "send $id set user_OLDPWD \"$PWD\""

@@ -22,6 +22,10 @@
     ~/.config/fastfetch/config.jsonc:
         create: true
         path: fastfetch/config.jsonc
+    ~/.config/lf/lfrc:
+        create: true
+        path: lf/lfrc
+    ~/.config/lf/icons: lf/icons
     ~/.git-commit-template: git-commit-template
 
 - shell:

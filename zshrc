@@ -29,6 +29,7 @@ HISTFILE=~/.zsh_history
 setopt HIST_IGNORE_SPACE
 
 setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
 
 # Include local bin directory in the path
 if [ -d "$HOME/bin" ] ; then
@@ -86,6 +87,10 @@ fi
 if type zoxide > /dev/null; then
     eval "$(zoxide init zsh)"
 fi
+
+lfcd() {
+    cd $(command lf --print-last-dir "$@")
+}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
